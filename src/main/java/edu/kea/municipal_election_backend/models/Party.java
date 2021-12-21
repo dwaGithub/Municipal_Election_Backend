@@ -23,6 +23,10 @@ public class Party {
     @Nullable
     private int votes;
 
+    @Column
+    @Nullable
+    private double votesPercentage;
+
     @JsonIgnore
     @OneToMany(mappedBy = "party", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Candidate> candidateList;
